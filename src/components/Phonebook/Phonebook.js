@@ -3,7 +3,7 @@ import { Formik, Field } from 'formik';
 import PropTypes from 'prop-types';
 import { StyledForm, FormButton } from './Phonebook.styled';
 
-const initialValues = { name: "", number: "" }
+const INITIAL_VALUES = { name: "", number: "" }
 
 export const Phonebook = ({ title, addContat }) => {
 
@@ -16,7 +16,7 @@ export const Phonebook = ({ title, addContat }) => {
         <Box py={5} px={4}>
             <h2>{title}</h2>
 
-            <Formik initialValues={initialValues}
+            <Formik initialValues={INITIAL_VALUES}
                 onSubmit={handleSubmit}>
                 <StyledForm autoComplete='off'>
                     <Box display="inline-flex"
