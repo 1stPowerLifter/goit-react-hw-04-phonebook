@@ -31,10 +31,7 @@ export const App = () => {
       )
   }
   
-  const deleteContact = (id) => this.setState(prevState => (
-    { contacts: [...prevState.contacts.filter(contact => contact.id !== id)] })
-  )
-
+  const deleteContact = (id) => setContacts(state => [...state.filter(contact => contact.id !== id)])
   return (
     <>
       <Phonebook title="Phonebook"
